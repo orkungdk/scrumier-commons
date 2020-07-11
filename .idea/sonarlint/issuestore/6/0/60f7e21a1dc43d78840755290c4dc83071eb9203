@@ -1,0 +1,4 @@
+
+osquid:UselessImportCheck"?Remove this unused import 'expection.constants.ErrorConstants'.(²±µùÿÿÿÿ8ºÇş¢«.
+ksquid:S4034'"HReplace this "filter().findFirst().isPresent()" chain with "anyMatch()".(Á¸è“ıÿÿÿÿ8Œê·¡«.
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(şÑ´8­ÕÜ¢«.
