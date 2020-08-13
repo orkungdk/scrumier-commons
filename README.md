@@ -26,9 +26,9 @@ ____
 - Abstraction of mappers. This class needs to be extended by all of the mappers so that, thanks to Mapstruct, creating a java class will be enought to generate mapper implementations.
 ____
 ## Rest
- - ## Model
+- ## Model
     - Request models that are consumed by controllers.
- - ## Rest
+- ## Rest
     - This package contains a http request client to be able to send rest request easily. It is used to send a REST request from a microservice to the another microservice.
 ____
 ## Response
