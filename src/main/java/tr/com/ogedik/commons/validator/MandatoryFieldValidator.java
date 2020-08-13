@@ -1,6 +1,3 @@
-/**
- * © 2020 Copyright Amadeus Unauthorised use and disclosure strictly forbidden.
- */
 package tr.com.ogedik.commons.validator;
 
 import org.apache.commons.collections4.CollectionUtils;

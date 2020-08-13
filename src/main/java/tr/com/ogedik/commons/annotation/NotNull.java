@@ -15,5 +15,4 @@ import java.lang.annotation.Target;
 public @interface NotNull {
 
     String message() default "Field cannot be null.";
-
 }
