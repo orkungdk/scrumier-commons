@@ -26,14 +26,14 @@ ____
 - Abstraction of mappers. This class needs to be extended by all of the mappers so that, thanks to Mapstruct, creating a java class will be enought to generate mapper implementations.
 ____
 ## Request
- - ### Model
+ - ## Model
     - Request models that are consumed by controllers.
- - ### Rest
+ - ## Rest
     - This package contains a http request client to be able to send rest request easily. It is used to send a REST request from a microservice to the another microservice.
 ____
 ## Response
-  - ### [CommonResponse.java](https://github.com/orkungdk/commons/blob/master/src/main/java/tr/com/ogedik/commons/response/CommonResponse.java): This is a common return type of all methods in the constructors. Thanks to **Builder Pattern** an instance of this object can be generated.
-  - ### [RestResponse.java](https://github.com/orkungdk/commons/blob/master/src/main/java/tr/com/ogedik/commons/response/RestResponse.java): This response object is for the responses that are parsed by HttpRestClient. On the other word, this response object uses for the internal request results.
+  - ## [CommonResponse.java](https://github.com/orkungdk/commons/blob/master/src/main/java/tr/com/ogedik/commons/response/CommonResponse.java): This is a common return type of all methods in the constructors. Thanks to **Builder Pattern** an instance of this object can be generated.
+  - ## [RestResponse.java](https://github.com/orkungdk/commons/blob/master/src/main/java/tr/com/ogedik/commons/response/RestResponse.java): This response object is for the responses that are parsed by HttpRestClient. On the other word, this response object uses for the internal request results.
 ____
 ## Util
   - Contains utility classes for complex type Java objects.
