@@ -67,6 +67,19 @@ public class ErrorException extends RuntimeException {
     }
 
     /**
+     * Create an exception from a single ErrorMessage
+     *
+     * @param errorType the generic error type
+     */
+    public ErrorException(ErrorType errorType) {
+        ErrorMessage error = new ErrorMessage();
+        error.setTitle(errorType.getTitle());
+        error.setStatus(errorType.getStatus());
+
+        httpStatusCode = buildErrors(Collections.singletonList(error));
+    }
+
+    /**
      * Create an exception from a single ErrorMessage and chains the original exception to it.
      *
      * @param error the error to display
