@@ -1,2 +1,4 @@
-package tr.com.ogedik.commons.model.worklogs;public class Worklog {
+package tr.com.ogedik.commons.model.worklogs;
+
+public class Worklog {
 }
