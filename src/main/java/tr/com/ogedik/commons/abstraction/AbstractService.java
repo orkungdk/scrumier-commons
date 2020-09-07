@@ -17,7 +17,6 @@ import java.util.Map;
  * @author orkun.gedik
  */
 public abstract class AbstractService {
-    //TODO: Better service structure
     @Qualifier("eurekaClient")
     @Autowired
     private EurekaClient discoveryClient;
