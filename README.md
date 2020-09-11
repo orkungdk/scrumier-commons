@@ -43,3 +43,30 @@ ____
 ## Validator
   - This package contains abstraction of a validator and the validation facade. ```Facade Pattern```is being used for validations.
   - MandatoryCheckValidator is a common validation class. This is a **singleton** classs. Instead of most of the validators in Jira Time Tracker, it is not a spring bean.
+  
+  
+  ___
+  
+  # Contribution
+  - ### Git flow
+    - In order to be able to contribute this package, you need to fork this repository and clone it into your local.
+    - Create a feature branch from master.
+    - Push your changes to your feature branch on your fork.
+    - Create a pull request from the feature branch on your fork to the master branch on this repository
+  - ### Building Artifact
+    - Add your authentication information to ~/.m2/settings.xml so that the github site-maven-plugin can push to GitHub
+    ```xml
+    <settings>
+      <servers>
+        <server>
+          <id>github</id>
+          <username>YOUR-USERNAME</username>
+          <password>YOUR-PASSWORD</password>
+       </server>
+      </servers>
+    </settings>
+    ```
+    - Run the following command and then you suppose to be able to see the new artifact in https://github.com/orkungdk/commons/tree/maven-repo
+    ```bash
+    mvn clean deploy
+    
