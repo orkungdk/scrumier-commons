@@ -17,6 +17,7 @@
         <org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <spring-cloud.eureka.client>1.4.0.RELEASE</spring-cloud.eureka.client>
+        <github.global.server>github</github.global.server>
     </properties>
 
     <dependencies>
@@ -83,9 +84,36 @@
             <version>1.4.0.RELEASE</version>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>commons-staging</id>
+            <name>Commons Temporary Staging</name>
+            <url>file://${project.build.directory}/staging</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version>0.11</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/staging/</outputDirectory>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryOwner>orkungdk</repositoryOwner>
+                    <repositoryName>commons</repositoryName>
+                    <branch>refs/heads/maven-repo</branch>
+                    <message>Deploy artifacts for ${project.version}</message>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals><goal>site</goal></goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
