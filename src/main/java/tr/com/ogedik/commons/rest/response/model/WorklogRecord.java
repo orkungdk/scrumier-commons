@@ -22,6 +22,7 @@ public class WorklogRecord implements BusinessObject {
     private JiraUser updateAuthor;
     private String comment;
     private String timeSpent;
+    private int timeSpentSeconds;
     private String created;
     private String updated;
     private String started;

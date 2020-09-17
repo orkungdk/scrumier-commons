@@ -21,6 +21,7 @@ public final class Services {
         public static final String TEST_CONNECTION = "/jira/connect";
         public static final String JIRA_USER = "jira/user";
         public static final String LOGGED_ISSUES = "/logged-issues";
+        public static final String CREATE_LOG = "/worklog";
 
         // Authentication Paths
         public static final String AUTHENTICATE = "/authenticate";
