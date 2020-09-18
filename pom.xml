@@ -103,7 +103,7 @@
                         <include>**/*</include>
                     </includes>
                     <repositoryOwner>orkungdk</repositoryOwner>
-                    <repositoryName>commons</repositoryName>
+                    <repositoryName>scrumier-commons</repositoryName>
                     <branch>refs/heads/maven-repo</branch>
                     <message>Deploy artifacts for ${project.version}</message>
                 </configuration>
