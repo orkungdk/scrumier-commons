@@ -42,7 +42,7 @@ ____
 ____ 
 ## Validator
   - This package contains abstraction of a validator and the validation facade. ```Facade Pattern```is being used for validations.
-  - MandatoryCheckValidator is a common validation class. This is a **singleton** classs. Instead of most of the validators in Jira Time Tracker, it is not a spring bean.
+  - MandatoryCheckValidator is a common validation class. This is a **singleton** classs. Instead of most of the validators in Scrumier, it is not a spring bean.
   
   
   ___
