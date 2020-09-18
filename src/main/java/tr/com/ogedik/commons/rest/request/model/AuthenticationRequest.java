@@ -13,9 +13,9 @@ import tr.com.ogedik.commons.model.BusinessObject;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthenticationRequest implements BusinessObject {
-  @NotNull
-  private String username;
-  @NotNull
-  private String password;
+    @NotNull
+    private String username;
+    @NotNull
+    private String password;
 
 }

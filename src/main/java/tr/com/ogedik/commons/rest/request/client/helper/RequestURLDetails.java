@@ -16,47 +16,47 @@ import java.util.Objects;
 @Getter
 @Setter
 public class RequestURLDetails implements Cloneable {
-  private String homeUrl;
-  private String requestPath;
-  private Map<String, String> queryParameters;
+    private String homeUrl;
+    private String requestPath;
+    private Map<String, String> queryParameters;
 
-  public RequestURLDetails(String homeUrl, String endpoint, Map<String, String> queryParams) {
-    this.homeUrl = homeUrl;
-    this.requestPath = endpoint;
-    this.queryParameters = queryParams;
-  }
-
-  public String invoke() {
-    StringBuilder stringBuilder = new StringBuilder();
-    stringBuilder.append(StringUtils.removeEnd(homeUrl, "/"));
-    if (Objects.nonNull(requestPath)) {
-      stringBuilder.append(requestPath.trim());
+    public RequestURLDetails(String homeUrl, String endpoint, Map<String, String> queryParams) {
+        this.homeUrl = homeUrl;
+        this.requestPath = endpoint;
+        this.queryParameters = queryParams;
     }
-    if (MapUtils.isNotEmpty(queryParameters)) {
-      boolean isFirstParameter = true;
 
-      for (String key : queryParameters.keySet()) {
-        if (isFirstParameter) {
-          stringBuilder.append("?");
-          isFirstParameter = false;
-        } else {
-          stringBuilder.append("&");
+    public String invoke() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(StringUtils.removeEnd(homeUrl, "/"));
+        if (Objects.nonNull(requestPath)) {
+            stringBuilder.append(requestPath.trim());
         }
-        stringBuilder.append(key);
-        stringBuilder.append("=");
-        stringBuilder.append(queryParameters.get(key).trim());
+        if (MapUtils.isNotEmpty(queryParameters)) {
+            boolean isFirstParameter = true;
 
-      }
-    }
-    return stringBuilder.toString();
-  }
+            for (String key : queryParameters.keySet()) {
+                if (isFirstParameter) {
+                    stringBuilder.append("?");
+                    isFirstParameter = false;
+                } else {
+                    stringBuilder.append("&");
+                }
+                stringBuilder.append(key);
+                stringBuilder.append("=");
+                stringBuilder.append(queryParameters.get(key).trim());
 
-  @Override
-  public Object clone() {
-    try {
-      return super.clone();
-    } catch (CloneNotSupportedException e) {
-      throw new ErrorException(CommonErrorType.INTERNAL_ERROR, "Request URL cannot be generated.");
+            }
+        }
+        return stringBuilder.toString();
     }
-  }
+
+    @Override
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new ErrorException(CommonErrorType.INTERNAL_ERROR, "Request URL cannot be generated.");
+        }
+    }
 }
