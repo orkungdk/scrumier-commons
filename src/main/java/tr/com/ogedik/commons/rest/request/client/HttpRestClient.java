@@ -71,7 +71,7 @@ public class HttpRestClient {
 
     private static HttpHeaders enrichHttpHeaders(Map<String, String> map) {
         HttpHeaders httpHeaders = retrieveDefaultHttpHeaders();
-        map.forEach((key,value) -> httpHeaders.add(key, value));
+        map.forEach((key, value) -> httpHeaders.add(key, value));
 
         return httpHeaders;
     }

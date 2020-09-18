@@ -17,12 +17,12 @@ import tr.com.ogedik.commons.model.BusinessObject;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JiraConfigurationProperties implements BusinessObject {
-  @NotNull
-  private String baseURL;
-  @NotNull
-  private String username;
-  @NotNull
-  private String password;
+    @NotNull
+    private String baseURL;
+    @NotNull
+    private String username;
+    @NotNull
+    private String password;
 
-  private String apiVersion;
+    private String apiVersion;
 }
