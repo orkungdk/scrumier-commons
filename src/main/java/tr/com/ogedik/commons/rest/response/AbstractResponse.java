@@ -4,10 +4,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.ObjectUtils;
 
+import java.io.Serializable;
+
 /**
  * @author orkun.gedik
  */
-public class AbstractResponse extends ResponseEntity {
+public class AbstractResponse extends ResponseEntity implements Serializable {
     public AbstractResponse(HttpStatus status) {
         super(status);
     }
