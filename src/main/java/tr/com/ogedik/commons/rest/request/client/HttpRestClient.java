@@ -6,8 +6,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
+import org.springframework.web.client.HttpClientErrorException;
 import tr.com.ogedik.commons.constants.Services;
 import tr.com.ogedik.commons.constants.Headers;
+import tr.com.ogedik.commons.expection.ErrorException;
+import tr.com.ogedik.commons.expection.constants.CommonErrorType;
+import tr.com.ogedik.commons.expection.constants.ErrorType;
+import tr.com.ogedik.commons.expection.model.ErrorMessage;
 import tr.com.ogedik.commons.rest.response.RestResponse;
 import tr.com.ogedik.commons.rest.request.client.helper.RequestURLDetails;
 
@@ -57,8 +62,19 @@ public class HttpRestClient {
 
     public static <T> ResponseEntity<T> exchange(RestContainer restContainer, @NonNull HttpMethod httpMethod,
                                                  @Nullable Class<T> responseType) {
-        return restContainer.getRestTemplate().exchange(restContainer.getUrl(), httpMethod, restContainer.getRequest(),
-                getResponseType(responseType));
+        try {
+            return restContainer.getRestTemplate().exchange(restContainer.getUrl(), httpMethod, restContainer.getRequest(), getResponseType(responseType));
+        } catch (HttpClientErrorException e) {
+            CommonErrorType errorType;
+
+            if (e.getRawStatusCode() == 401) {
+                errorType = CommonErrorType.JIRA_AUTHENTICATION_ERROR;
+            } else {
+                errorType = CommonErrorType.JIRA_ACCESS_ERROR;
+            }
+
+            throw new ErrorException(ErrorMessage.builder().status(errorType.getStatus()).detail(errorType.getTitle()).build());
+        }
     }
 
     private static <T> Class<T> getResponseType(@Nullable Class<T> responseType) {
