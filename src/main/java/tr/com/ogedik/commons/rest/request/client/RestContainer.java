@@ -1,10 +1,9 @@
 package tr.com.ogedik.commons.rest.request.client;
 
+import lombok.Getter;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
-
-import lombok.Getter;
 import tr.com.ogedik.commons.rest.request.client.helper.RequestURLDetails;
 
 /**

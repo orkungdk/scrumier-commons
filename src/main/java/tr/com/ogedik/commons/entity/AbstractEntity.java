@@ -5,8 +5,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.time.LocalDateTime;

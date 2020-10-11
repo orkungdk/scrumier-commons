@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import tr.com.ogedik.commons.model.BusinessObject;
 
-import java.io.Serializable;
-
 @Getter
 @Setter
 @AllArgsConstructor

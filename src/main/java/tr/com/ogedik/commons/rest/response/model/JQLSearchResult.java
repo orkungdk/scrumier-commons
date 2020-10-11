@@ -1,7 +1,6 @@
 package tr.com.ogedik.commons.rest.response.model;
 
 import lombok.Getter;
-import lombok.Setter;
 import tr.com.ogedik.commons.model.BusinessObject;
 
 import java.util.List;

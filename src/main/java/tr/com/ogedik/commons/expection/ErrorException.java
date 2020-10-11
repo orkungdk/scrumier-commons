@@ -1,11 +1,11 @@
 package tr.com.ogedik.commons.expection;
 
+import tr.com.ogedik.commons.expection.constants.ErrorType;
+import tr.com.ogedik.commons.expection.model.ErrorMessage;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import tr.com.ogedik.commons.expection.constants.ErrorType;
-import tr.com.ogedik.commons.expection.model.ErrorMessage;
 
 /**
  * @author orkun.gedik

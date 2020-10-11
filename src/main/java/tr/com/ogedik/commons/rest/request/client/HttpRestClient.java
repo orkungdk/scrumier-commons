@@ -7,14 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 import org.springframework.web.client.HttpClientErrorException;
-import tr.com.ogedik.commons.constants.Services;
 import tr.com.ogedik.commons.constants.Headers;
+import tr.com.ogedik.commons.constants.Services;
 import tr.com.ogedik.commons.expection.ErrorException;
 import tr.com.ogedik.commons.expection.constants.CommonErrorType;
-import tr.com.ogedik.commons.expection.constants.ErrorType;
 import tr.com.ogedik.commons.expection.model.ErrorMessage;
-import tr.com.ogedik.commons.rest.response.RestResponse;
 import tr.com.ogedik.commons.rest.request.client.helper.RequestURLDetails;
+import tr.com.ogedik.commons.rest.response.RestResponse;
 
 import java.util.Collections;
 import java.util.Map;

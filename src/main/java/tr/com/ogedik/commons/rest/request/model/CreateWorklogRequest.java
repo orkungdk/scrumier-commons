@@ -1,6 +1,5 @@
 package tr.com.ogedik.commons.rest.request.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import tr.com.ogedik.commons.model.BusinessObject;
 
